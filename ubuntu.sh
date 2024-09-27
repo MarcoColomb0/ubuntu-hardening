@@ -65,7 +65,6 @@ function main {
       ADMINIP="$(hostname -I | sed -E 's/\.[0-9]+ /.0\/24 /g')"
     fi
 
-    sed -i "s/FW_ADMIN='/FW_ADMIN='$ADMINIP /" ./ubuntu.cfg
     sed -i "s/SSH_GRPS='/SSH_GRPS='$(id "$($WBIN -ih | awk '{print $1}' | head -n1)" -ng) /" ./ubuntu.cfg
     sed -i "s/CHANGEME=''/CHANGEME='$(date +%s)'/" ./ubuntu.cfg
     sed -i "s/VERBOSE='N'/VERBOSE='Y'/" ./ubuntu.cfg
@@ -91,7 +90,6 @@ function main {
   readonly DISABLEMOD
   readonly DISABLENET
   readonly FAILLOCKCONF
-  readonly FW_ADMIN
   readonly JOURNALDCONF
   readonly KEEP_SNAPD
   readonly LIMITSCONF

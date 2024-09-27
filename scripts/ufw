@@ -22,9 +22,7 @@ function f_firewall {
 
   ufw default deny incoming
 
-  for admin in $FW_ADMIN; do
-    ufw allow log from "$admin" to any port "$SSH_PORT" proto tcp
-  done
+  ufw allow 22
 
   ufw --force enable
 

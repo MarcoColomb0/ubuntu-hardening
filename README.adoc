@@ -68,7 +68,6 @@ Note that `/tmp` will be added automatically by the script.
 
 [source,shell]
 ----
-FW_ADMIN='127.0.0.1' // <1>
 SSH_GRPS='sudo' // <2>
 SSH_PORT='22' // <3>
 SYSCTL_CONF='./misc/sysctl.conf' // <4>
@@ -128,7 +127,7 @@ USERCONF='/etc/systemd/user.conf'
 <8> NTP server pool.
 <9> Add a specific time zone or use the system default by leaving it empty.
 <10> If you want all the details or not.
-<11> Let the script guess the `FW_ADMIN` and `SSH_GRPS` settings.
+<11> Let the script guess the `SSH_GRPS` setting.
 <12> Add a valid email address, so PSAD can send notifications.
 <13> If `'Y'` then the `snapd` package will be held to prevent removal.
 <14> Add something just to verify that you actually glanced the code.
@@ -160,7 +159,7 @@ The `kernel` function is located in link:scripts/kernel[./scripts/kernel].
 
 Configures https://help.ubuntu.com/community/UFW[UFW] if installed.
 
-Allows connections from the adresses in `$FW_ADMIN` to the `$SSH_PORT`.
+Allows connections from all addresses to the `$SSH_PORT`.
 
 Sets logging and `IPT_SYSCTL=/etc/sysctl.conf`.
 
