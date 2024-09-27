@@ -22,7 +22,13 @@ function f_firewall {
 
   ufw default deny incoming
 
-  ufw allow 22,2377,7946,4789,500,4500,5432
+  ufw allow OpenSSH
+  ufw allow 2377
+  ufw allow 7946
+  ufw allow 4789
+  ufw allow 500
+  ufw allow 4500
+  ufw allow 5432
 
   ufw --force enable
 
