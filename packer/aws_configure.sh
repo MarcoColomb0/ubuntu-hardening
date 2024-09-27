@@ -8,7 +8,7 @@ sudo apt-get -y install git net-tools procps --no-install-recommends
 
 cd /tmp || exit 1
 
-git clone https://github.com/konstruktoid/hardening.git
+git clone https://github.com/MarcoColomb0/ubuntu-hardening.git
 
 cd ./hardening || exit 1
 

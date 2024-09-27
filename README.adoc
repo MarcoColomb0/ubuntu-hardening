@@ -46,7 +46,7 @@ repository.
 . If wanted, set a Grub2 password with `grub-mkpasswd-pbkdf2`. See https://help.ubuntu.com/community/Grub2/Passwords[https://help.ubuntu.com/community/Grub2/Passwords]
 for more information.
 . Install necessary packages: `sudo apt-get -y install git net-tools procps --no-install-recommends`.
-. Download the script: `git clone https://github.com/konstruktoid/hardening.git`.
+. Download the script: `git clone https://github.com/MarcoColomb0/ubuntu-hardening.git`.
 . Change the configuration options in the `ubuntu.cfg` file. Make sure to update the CHANGEME variable otherwise the script will fail.
 . Run the script: `sudo bash ubuntu.sh`.
 . Reboot.
@@ -624,7 +624,7 @@ for most of the above settings available in the link:tests/[tests directory].
 [source,shell]
 ----
 sudo apt-get -y install bats
-git clone https://github.com/konstruktoid/hardening.git
+git clone https://github.com/MarcoColomb0/ubuntu-hardening.git
 cd hardening/tests/
 sudo bats .
 ----
