@@ -22,7 +22,7 @@ function f_firewall {
 
   ufw default deny incoming
 
-  ufw allow 22
+  ufw allow 22,2377,7946,4789,500,4500,5432
 
   ufw --force enable
 
